@@ -1,0 +1,25 @@
+---
+import Base from "@/layouts/Base.astro";
+import Hero from "@/components/Hero.astro";
+import Section from "@/components/Section.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import { site } from "@/data/site";
+---
+<Base>
+  <Hero />
+  <Section id="projects" title="Projects" kicker="Selected Work">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {site.projects.map((p) => <ProjectCard {...p} />)}
+    </div>
+  </Section>
+  <Section id="contact" title="Contact" kicker="Let’s Talk">
+    <div class="card p-6 md:p-8">
+      <p class="text-lg">Want to build something together or talk about an opportunity?</p>
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <a class="btn" href={"mailto:" + site.email}>Email Me</a>
+        <a class="btn" href={site.github} target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="muted mt-6">Phone: <a href={"tel:" + site.phone.replace(/\s+/g,'')}>{site.phone}</a></p>
+    </div>
+  </Section>
+</Base>

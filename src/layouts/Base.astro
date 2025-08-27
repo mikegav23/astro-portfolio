@@ -1,0 +1,43 @@
+---
+import "@/styles/global.css";
+import { site } from "@/data/site";
+const { name, role, phone, email, github } = site;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{name} - {role}</title>
+    <meta name="description" content="Portfolio of {name}, {role}." />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="font-sans antialiased selection:bg-base-accent/30">
+    <header class="container py-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+        <div class="text-sm muted">
+          <span class="mr-3">📍 {site.location}</span>
+          <span class="mr-3">☎️ <a href={"tel:" + phone.replace(/\s+/g,'')}>{phone}</a></span>
+          <span class="mr-3">✉️ <a href={"mailto:" + email}>{email}</a></span>
+        </div>
+        <div class="text-sm">
+          <a href={github} target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <hr class="mt-6" />
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="container py-12 muted text-sm">
+      <hr class="mb-6" />
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+        <p>&copy; {new Date().getFullYear()} {name}. All rights reserved.</p>
+        <p>Built with Astro • Deployed on Cloudflare Pages</p>
+      </div>
+    </footer>
+  </body>
+</html>

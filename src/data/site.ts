@@ -1,0 +1,63 @@
+export const site = {
+  name: "Michael Gavalas",
+  role: "Full-Stack JavaScript / TypeScript Developer",
+  location: "EMEA • Remote",
+  phone: "+30 698 689 3242",
+  email: "mgavalas23@gmail.com",
+  github: "https://github.com/mikegav23",
+  portfolio: "https://yourname.dev",
+  tagline: "I build fast, scalable, beautiful web apps.",
+  about:
+    "Passionate full-stack dev who ships real product. Strong in React/Next.js/SvelteKit on the front, Express/Fastify on the back, and PostgreSQL/Mongo for clean data models. I turn ideas into working software quickly with quality.",
+  skills: [
+    "JavaScript (ES6+)",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "SvelteKit",
+    "TailwindCSS",
+    "Express",
+    "Fastify",
+    "REST",
+    "GraphQL",
+    "PostgreSQL",
+    "MongoDB",
+    "Drizzle ORM",
+    "Git",
+    "Docker",
+    "Go (basic)",
+    "Python (basic)",
+  ],
+  projects: [
+    {
+      title: "SaaS Dashboard",
+      blurb:
+        "Multi-tenant AI Cu dashboard with auth, charts, and role-based access.",
+      stack: ["React", "Fastify", "PostgreSQL", "Drizzle"],
+      link: "#",
+      repo: "#",
+    },
+    {
+      title: "Invoice Inbox (AI-Powered)",
+      blurb:
+        "Pulls emails + attachments, OCRs invoices/receipts, auto-tags by client/type, writes to Sheets, and files to Drive. Zero-touch bookkeeping intake.",
+      stack: [
+        "Next.js",
+        "Fastify",
+        "PostgreSQL",
+        "Drizzle",
+        "OCR",
+        "Gmail/Drive API",
+      ],
+      link: "#",
+      repo: "#",
+    },
+    {
+      title: "E-Commerce Mini",
+      blurb: "Storefront, cart, checkout (Stripe test), admin products.",
+      stack: ["Next.js", "Express", "Stripe"],
+      link: "#",
+      repo: "#",
+    },
+  ],
+};
